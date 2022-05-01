@@ -2,18 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 plt.style.use('ggplot')
 
-plt.rcParams['font.family'] = 'serif'
-plt.rcParams['font.serif'] = 'Ubuntu'
-plt.rcParams['font.monospace'] = 'Ubuntu Mono'
-plt.rcParams['font.size'] = 12
-plt.rcParams['axes.labelsize'] = 11
-plt.rcParams['axes.labelweight'] = 'bold'
-plt.rcParams['axes.titlesize'] = 12
-plt.rcParams['xtick.labelsize'] = 9
-plt.rcParams['ytick.labelsize'] = 9
-plt.rcParams['legend.fontsize'] = 11
-plt.rcParams['figure.titlesize'] = 13
-
 from numpy import genfromtxt
 from scipy.stats import multivariate_normal
 from sklearn.metrics import f1_score
@@ -69,6 +57,7 @@ print(tr_data[1:5,:])
 
 plt.xlabel('Latency (ms)')
 plt.ylabel('Throughput (mb/s)')
+plt.title('Made by Sarnav Kundu')
 plt.plot(tr_data[:,0],tr_data[:,1],'bx')
 plt.show()
 
@@ -84,6 +73,7 @@ outliers = np.asarray(np.where(p < ep))
 plt.figure()
 plt.xlabel('Latency (ms)')
 plt.ylabel('Throughput (mb/s)')
+plt.title('Made by Sarnav Kundu')
 plt.plot(tr_data[:,0],tr_data[:,1],'bx')
 plt.plot(tr_data[outliers,0],tr_data[outliers,1],'ro')
 plt.show()
